@@ -70,8 +70,9 @@ cd libevent-2.0.19-stable
 ./configure --prefix=$HOME/local --disable-shared
 
 make -j
-make install  
+make install 
 
+############
 cd ..
 
   
@@ -90,7 +91,7 @@ cd ncurses-6.2
 
 make -j
 make install  
-
+############
 
 cd ..
 
