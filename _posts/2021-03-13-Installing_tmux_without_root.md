@@ -38,7 +38,7 @@ TMUX_VERSION=3.1b
 
 # create our directories
 
-mkdir -p $HOME/**local** $HOME/tmux_tmp
+mkdir -p $HOME/local $HOME/tmux_tmp
 
 cd $HOME/tmux_tmp
 
@@ -66,7 +66,7 @@ tar xvzf libevent-2.0.19-stable.tar.gz
 
 cd libevent-2.0.19-stable
 
-./configure --prefix=$HOME/**local** --disable-shared
+./configure --prefix=$HOME/local --disable-shared
 
 make -j
 
@@ -86,7 +86,7 @@ tar xvzf ncurses-6.2.tar.gz
 
 cd ncurses-6.2
 
-./configure --prefix=$HOME/**local**
+./configure --prefix=$HOME/local
 
 make -j
 
@@ -112,7 +112,7 @@ cd tmux-${TMUX_VERSION}
 
 CPPFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-static -L$HOME/local/include -L$HOME/local/include/ncurses -L$HOME/local/lib" make
 
-cp tmux $HOME/**local**/bin
+cp tmux $HOME/local/bin
 
 cd ..
 
