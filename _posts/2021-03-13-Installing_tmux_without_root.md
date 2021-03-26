@@ -70,7 +70,7 @@ cd libevent-2.0.19-stable
 
 make -j
 make install
-
+</br>
 
 cd ..
 
@@ -90,7 +90,7 @@ cd ncurses-6.2
 
 make -j
 make install
-
+</br>
 
 cd ..
 
