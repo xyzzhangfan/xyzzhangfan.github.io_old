@@ -1,28 +1,106 @@
 ---
 layout:     post
-title:      Xcode Commond Line Installation2
-subtitle:   How to install Xcode Commond Line tool
-date:       2018-05-05
-author:     xyzzhangfan
-header-img: img/post-bg-kuaidi.jpg
+title:      OC 内存管理的基本概念
+subtitle:   OC 内存管理的基本概念以及应用
+date:       2020-10-09
+author:     BY
+header-img: img/post-bg-cook.jpg
 catalog: true
 tags:
-    - Xcode
     - iOS
 ---
 
-## Installing
 
-	xcode-select --install
 
-![](https://upload-images.jianshu.io/upload_images/545662-f9031dfcce085f8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459)
+## OC 内存管理的基本概念
 
-## Switch Xcode version
 
-### Show the current version of xcode
+###1. 内存管理的基本概念
 
-	$ xcode-select --print-path
+- 栈区 stack
+
+- 堆区 heap
+
+	heap（堆）是最自由的一种内存，它完全由程序来负责内存的管理，包括什么时候申请，什么时候释放，而且对它的使用也没有什么大小的限制。在C/C++中，用alloc系统函数和new申请的内存都存在于heap段中。
+
+- BSS区
+
+	来存放没有被初始化或初始化为0的全局变量，因为是全局变量，所以在程序运行的整个生命周期内都存在于内存中。有趣的是这个段中的变量只占用程序运行时的内存空间，而不占用程序文件的储存空间。
 	
-### Choose the default Xcode version
+- 数据区 Data
+	
+	初始化过的全局变量数据段，该段用来保存初始化了的非0的全局变量，如果全局变量初始化为0，则编译有时会出于优化的考虑，将其放在bss段中。因为也是全局变量，所以在程序运行的整个生命周期内都存在于内存中。与bss段不同的是，data段中的变量既占程序运行时的内存空间，也占程序文件的储存空间。
+	
+- 代码区 text
 
-	$ sudo xcode-select -switch /Applications/Xcode.app
+### 2. OC内存管理的范围
+
+`堆区` 中 继承 `NSObject ` 的 `对象`
+
+
+## 内存管理的原理及分类
+
+
+- **引用计数**
+
+- `ARC` or `MRC`
+
+## MRC快速入门
+
+- +1 
+
+	alloc new copy 
+- -1 
+
+	release autorelease
+	
+## 内存管理原则
+
+
+- 原则
+
+	对象有人使用，不回收
+	
+	使用对象，+1
+	
+	不使用对象 -1
+	
+- 谁创建， 谁release
+
+- 谁retain， 谁release 
+- 总结
+
+	+1 就该-1
+	
+	
+内存管理的研究内容：
+
+1. 野指针
+	
+	1. 定义的指针没有初始化（没有指向）
+	2. 指向的空间已经被释放 （僵尸对象）
+
+2. 内存泄漏
+
+	栈区指针变量已经被释放，而堆区的空间还没有被释放
+	
+## 单个对象的内存管理（野指针）
+
+###僵尸对象
+已经被释放的对象，在内存中可能还能继续访问，但容易出
+
+开启僵尸对象检测：
+
+<img src = "https://ww3.sinaimg.cn/large/006tKfTcgy1fbul3381n8j30pu0eyq4w.jpg" width = "800">
+
+### 避免使用僵尸对象
+
+对象释放后，将 `指针` -> `nil`
+
+### 带个对象的内存泄漏
+
+⚠️ 注意 相互持有 、自己调用自己 的情况
+		
+	[self mothd:self]；
+ 
+
