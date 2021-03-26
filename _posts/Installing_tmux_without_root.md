@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      Installing tmux without root access
+subtitle:   Tested on Ubuntu 20.04
+date:       2021-03-13
+author:     xyzzhangfan
+header-img: img/post-bg-rwd.jpg
+catalog: 	 true
+tags:
+    - MacOS
+    - Tmux
+---
+
 # Installing tmux without root access
 
 The following script  was adapted from [https://gist.github.com/ryin/3106801,](https://gist.github.com/ryin/3106801,)with some improvements and broken link fixes. Have tested on Ubuntu 20.04.
