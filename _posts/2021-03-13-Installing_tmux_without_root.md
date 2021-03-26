@@ -16,6 +16,7 @@ tags:
 The following script  was adapted from [https://gist.github.com/ryin/3106801,](https://gist.github.com/ryin/3106801,)with some improvements and broken link fixes. Have tested on Ubuntu 20.04.
 
 ``` sh
+
 #!/bin/bash
 
 # Script for installing tmux on systems where you don't have root access.
@@ -70,7 +71,6 @@ cd libevent-2.0.19-stable
 
 make -j
 make install
-</br>
 
 cd ..
 
@@ -90,7 +90,7 @@ cd ncurses-6.2
 
 make -j
 make install
-</br>
+
 
 cd ..
 
