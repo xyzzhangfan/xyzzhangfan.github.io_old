@@ -7,8 +7,7 @@ author:     xyzzhangfan
 header-img: img/post-bg-rwd.jpg
 catalog: 	 true
 tags:
-    - MacOS
-    - Tmux
+
 ---
 
 # Installing tmux without root access
