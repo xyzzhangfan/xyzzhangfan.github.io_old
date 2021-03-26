@@ -18,7 +18,7 @@ The following script  was adapted from [https://gist.github.com/ryin/3106801,](h
 ``` bash
 #!/bin/bash
 
-# Script **for** installing tmux on systems where you don't have root access.
+# Script for installing tmux on systems where you don't have root access.
 
 # tmux will be installed in $HOME/local/bin.
 
