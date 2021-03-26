@@ -28,7 +28,7 @@ The following script  was adapted from [https://gist.github.com/ryin/3106801,](h
 
 # exit on error
 
-**set** -e
+set -e
 
   
 
@@ -40,7 +40,7 @@ TMUX_VERSION=3.1b
 
 mkdir -p $HOME/**local** $HOME/tmux_tmp
 
-**cd** $HOME/tmux_tmp
+cd $HOME/tmux_tmp
 
   
 
@@ -64,7 +64,7 @@ wget ftp://ftp.gnu.org/gnu/ncurses/ncurses-6.2.tar.gz
 
 tar xvzf libevent-2.0.19-stable.tar.gz
 
-**cd** libevent-2.0.19-stable
+cd libevent-2.0.19-stable
 
 ./configure --prefix=$HOME/**local** --disable-shared
 
@@ -72,7 +72,7 @@ make -j
 
 make install
 
-**cd** ..
+cd ..
 
   
 
@@ -84,7 +84,7 @@ make install
 
 tar xvzf ncurses-6.2.tar.gz
 
-**cd** ncurses-6.2
+cd ncurses-6.2
 
 ./configure --prefix=$HOME/**local**
 
@@ -92,7 +92,7 @@ make -j
 
 make install
 
-**cd** ..
+cd ..
 
   
 
@@ -104,7 +104,7 @@ make install
 
 tar xvzf tmux-${TMUX_VERSION}.tar.gz
 
-**cd** tmux-${TMUX_VERSION}
+cd tmux-${TMUX_VERSION}
 
 #./autogen.sh
 
@@ -114,7 +114,7 @@ CPPFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-static 
 
 cp tmux $HOME/**local**/bin
 
-**cd** ..
+cd ..
 
   
 
@@ -124,5 +124,5 @@ rm -rf $HOME/tmux_tmp
 
   
 
-**echo**  "$HOME/local/bin/tmux is now available. You can optionally add $HOME/local/bin to your PATH."
+echo  "$HOME/local/bin/tmux is now available. You can optionally add $HOME/local/bin to your PATH."
 ```
