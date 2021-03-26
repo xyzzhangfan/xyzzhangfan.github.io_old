@@ -3,6 +3,8 @@
 The following script  was adapted from [https://gist.github.com/ryin/3106801,](https://gist.github.com/ryin/3106801,)with some improvements and broken link fixes. Have tested on Ubuntu 20.04.
 
 ``` bash
+#!/bin/bash
+
 Script **for** installing tmux on systems where you don't have root access.
 
 # tmux will be installed in $HOME/local/bin.
