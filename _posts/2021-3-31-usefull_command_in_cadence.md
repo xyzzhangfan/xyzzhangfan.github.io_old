@@ -30,13 +30,16 @@ echo "alias cadence_tool 'source /usr/local/cadence/IC617.cshrc; cd ~/cadence617
 ### Change default simulator to spectre:
 
 In .cdsenv:
+```
 asimenv.startup       simulator       string  "spectre"
-
+```
 In .cdsini:
+```
 	    (if (isFile "./.cdsenv")
 		(envLoadVals 
 		 ?envFile "./.cdsenv"
 		 ?tool "ALL"))
+```
 
 ***
 
