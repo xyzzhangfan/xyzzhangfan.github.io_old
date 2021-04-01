@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      Some Usefull Commands in Cadence
+subtitle:   Some Usefull Commands in Cadence
+date:       2021-03-31
+author:     xyzzhangfan
+header-img: img/post-bg-rwd.jpg
+catalog: 	 true
+tags:
+  - Cadence
+  - Linux
+  - bash
+---
+
 ### Unlock file in cadence
 
 ```bash
