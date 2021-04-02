@@ -7,7 +7,8 @@ author:     xyzzhangfan
 header-img: img/post-bg-rwd.jpg
 catalog: 	 true
 tags:
-  - Macos
+  - Linux
+  - Bash
   - Tmux
 ---
 
