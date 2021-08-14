@@ -2,7 +2,7 @@
 layout:     post
 title:      How to measure the power in Cadence Virtuoso
 subtitle:   Solving with Adobe acrobat
-date:       2021-04-07
+date:       2021-08-13
 author:     xyzzhangfan
 header-img: img/post-bg-rwd.jpg
 catalog: 	 true
