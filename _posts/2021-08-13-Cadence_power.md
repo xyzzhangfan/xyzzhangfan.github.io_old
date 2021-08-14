@@ -1,5 +1,4 @@
 ---
-​---
 layout:     post
 title:      How to measure the power in Cadence Virtuoso
 subtitle:   Solving with Adobe acrobat
@@ -10,10 +9,9 @@ catalog: 	 true
 tags:
   - Candence Virtuoso
   - Power Measurement
-​---
 ---
 
-### How to measure the power in Cadence Virtuoso
+## How to measure the power in Cadence Virtuoso
 
 1. In ADE-L choose Outputs --> Save All 
 
