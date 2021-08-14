@@ -1,4 +1,3 @@
-```
 ---
 layout:     post
 title:      Using VCS and DVE to simulate Verilog Code
@@ -12,9 +11,9 @@ tags:
   - Verilog
   - Chip Design
 ---
-```
 
-### Using VCS and DVE to simulate Verilog Code
+
+## Using VCS and DVE to simulate Verilog Code
 
 1. Writing Verilog with any text editor(i.e. Vim/VS code/Sublime text)
 
