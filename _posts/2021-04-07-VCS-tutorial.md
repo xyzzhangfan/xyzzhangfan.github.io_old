@@ -21,6 +21,8 @@ tags:
 
    ``` bash
    vcs -Mupdate -RPP -v [YOU_Design_files.v] -o demo -full64 -debug_all
+   # For example:
+   vcs '-Mupdate' '-RPP' '-sverilog' 'stdlib_10lpe_ccs_20210527.v' 'tb_Top_decoder_wo_scan_chain.sv' 'Top_decoder_wo_scan_chain.sv' 'WL_decoder_state_machine.4.0.syn.v' 'SL_decoder_state_machine.4.0.syn.v' 'BL_decoder_no_state_machine.4.0.syn.v' 'Logical_part.syn.v' '-top' 'tb_top_wo_scan_chain' '-o' 'decoder_wo_scan_chain' '-full64' '-debug_all'
    ```
 
 3. A executable demo file now appared in your current folder. Run it with GUI:
